@@ -1,0 +1,47 @@
+[
+{"type":"header","version":"4.9.7","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"bbdms"},
+{"type":"table","name":"admin","database":"bbdms","data":
+[
+{"id":"1","UserName":"admin","Password":"5c428d8875d2948607f3e3fe134d71b4","updationDate":"2017-06-18 13:22:38"}
+]
+}
+,{"type":"table","name":"tblblooddonars","database":"bbdms","data":
+[
+{"id":"7","FullName":"Aditi","MobileNumber":"3456789345","EmailId":"adi123@gmail.com","Gender":"Female","Age":"20","BloodGroup":"O-","Address":"Dublin 2","Message":" Blood donor","PostingDate":"2021-04-22 16:56:42","status":"1"},
+{"id":"8","FullName":"Kajol Daiya","MobileNumber":"6756453423","EmailId":"Kaju@gmail.com","Gender":"Female","Age":"21","BloodGroup":"A-","Address":"Dublin 3","Message":"Certified Donor","PostingDate":"2021-04-22 16:57:55","status":"1"},
+{"id":"9","FullName":"Abishek Pandey","MobileNumber":"4567324678","EmailId":"Abishek@gmail.com","Gender":"Male","Age":"22","BloodGroup":"AB-","Address":"Dublin 4 Mayor street","Message":" ","PostingDate":"2021-04-22 16:58:41","status":"1"},
+{"id":"10","FullName":"Kedar Dahale","MobileNumber":"5645347786","EmailId":"Kd34@gmail.com","Gender":"Male","Age":"30","BloodGroup":"O-","Address":"Malbour street sublin 8","Message":" ","PostingDate":"2021-04-22 16:59:26","status":"1"},
+{"id":"11","FullName":"Sumit Ramane","MobileNumber":"4756587565","EmailId":"ramane5@gmail.com","Gender":"Male","Age":"25","BloodGroup":"A-","Address":"Dublin 3","Message":" ","PostingDate":"2021-04-22 17:00:04","status":"1"}
+]
+}
+,{"type":"table","name":"tblbloodgroup","database":"bbdms","data":
+[
+{"id":"1","BloodGroup":"A-","PostingDate":"2017-06-30 21:33:50"},
+{"id":"2","BloodGroup":"AB-","PostingDate":"2017-06-30 21:34:00"},
+{"id":"3","BloodGroup":"O-","PostingDate":"2017-06-30 21:34:05"},
+{"id":"4","BloodGroup":"A-","PostingDate":"2017-06-30 21:34:10"},
+{"id":"5","BloodGroup":"A+","PostingDate":"2017-06-30 21:34:13"},
+{"id":"6","BloodGroup":"AB+","PostingDate":"2017-06-30 21:34:18"},
+{"id":"7","BloodGroup":"O+","PostingDate":"2021-04-22 16:56:57"}
+]
+}
+,{"type":"table","name":"tblcontactusinfo","database":"bbdms","data":
+[
+{"id":"1","Address":"Test Demo test demo\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t","EmailId":"test@test.com","ContactNo":"8585233222"}
+]
+}
+,{"type":"table","name":"tblcontactusquery","database":"bbdms","data":
+[
+{"id":"2","name":"caasda","EmailId":"webhostingamigo@gmail.com","ContactNumber":"42342342","Message":"drftghjk","PostingDate":"2017-06-30 22:17:09","status":null},
+{"id":"3","name":"caasda","EmailId":"webhostingamigo@gmail.com","ContactNumber":"42342342","Message":"drftghjk","PostingDate":"2017-06-30 22:21:30","status":null},
+{"id":"4","name":"te","EmailId":"sdfsdf@gmail.com","ContactNumber":"75787875545","Message":"sfsdf sdg hs h sh","PostingDate":"2017-07-01 08:19:36","status":null}
+]
+}
+,{"type":"table","name":"tblpages","database":"bbdms","data":
+[
+{"id":"2","PageName":"Why Become Donor","type":"donor","detail":"<span style=\"color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">A blood donation is truly an altruistic gift that an individual can give to others in need. In only 45-60 minutes, an eligible individual can donate one unit of blood that can be separated into four individual components that could help save multiple lives.\r\n\r\nFrom one unit of blood, red blood cells can be extracted and used to treat patients who lost blood due to trauma or those who are recovering from surgery. Plasma, the liquid part of blood, is typically administered to patients with requiring treatment to improve blood clotting. Platelets, a third component, clot the blood when cuts or other open wounds occur, and are often used in the treatment of patients with cancer or those undergoing organ transplants. Finally, cryoprecipitated anti-hemophilic factor (AHF) is also used for clotting factors.<\/span>"},
+{"id":"3","PageName":"About Us ","type":"aboutus","detail":"<span style=\"color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; text-align: justify;\">The mission of website is to register volunteer for user and organisation for blood donation which will make it easier for hospital and community blood centres.\r\nDatabase information of the volunteer will help to contact the volunteer for blood donation in emergency. \r\n\r\n\r\n\r\n“Blood Donation Is A Small Act Of Kindness That Does Great And Big Wonders.”\r\n<\/span>"}
+]
+}
+]

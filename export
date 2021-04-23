@@ -1,0 +1,237 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 23, 2021 at 12:00 AM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `bbdms`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `UserName` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
+(1, 'admin', '5c428d8875d2948607f3e3fe134d71b4', '2017-06-18 12:22:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblblooddonars`
+--
+
+CREATE TABLE `tblblooddonars` (
+  `id` int(11) NOT NULL,
+  `FullName` varchar(100) DEFAULT NULL,
+  `MobileNumber` char(11) DEFAULT NULL,
+  `EmailId` varchar(100) DEFAULT NULL,
+  `Gender` varchar(20) DEFAULT NULL,
+  `Age` int(11) DEFAULT NULL,
+  `BloodGroup` varchar(20) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `Message` mediumtext,
+  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblblooddonars`
+--
+
+INSERT INTO `tblblooddonars` (`id`, `FullName`, `MobileNumber`, `EmailId`, `Gender`, `Age`, `BloodGroup`, `Address`, `Message`, `PostingDate`, `status`) VALUES
+(7, 'Aditi', '3456789345', 'adi123@gmail.com', 'Female', 20, 'O-', 'Dublin 2', ' Blood donor', '2021-04-22 15:56:42', 1),
+(8, 'Kajol Daiya', '6756453423', 'Kaju@gmail.com', 'Female', 21, 'A-', 'Dublin 3', 'Certified Donor', '2021-04-22 15:57:55', 1),
+(9, 'Abishek Pandey', '4567324678', 'Abishek@gmail.com', 'Male', 22, 'AB-', 'Dublin 4 Mayor street', ' ', '2021-04-22 15:58:41', 1),
+(10, 'Kedar Dahale', '5645347786', 'Kd34@gmail.com', 'Male', 30, 'O-', 'Malbour street sublin 8', ' ', '2021-04-22 15:59:26', 1),
+(11, 'Sumit Ramane', '4756587565', 'ramane5@gmail.com', 'Male', 25, 'A-', 'Dublin 3', ' ', '2021-04-22 16:00:04', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblbloodgroup`
+--
+
+CREATE TABLE `tblbloodgroup` (
+  `id` int(11) NOT NULL,
+  `BloodGroup` varchar(20) DEFAULT NULL,
+  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblbloodgroup`
+--
+
+INSERT INTO `tblbloodgroup` (`id`, `BloodGroup`, `PostingDate`) VALUES
+(1, 'A-', '2017-06-30 20:33:50'),
+(2, 'AB-', '2017-06-30 20:34:00'),
+(3, 'O-', '2017-06-30 20:34:05'),
+(4, 'A-', '2017-06-30 20:34:10'),
+(5, 'A+', '2017-06-30 20:34:13'),
+(6, 'AB+', '2017-06-30 20:34:18'),
+(7, 'O+', '2021-04-22 15:56:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblcontactusinfo`
+--
+
+CREATE TABLE `tblcontactusinfo` (
+  `id` int(11) NOT NULL,
+  `Address` tinytext,
+  `EmailId` varchar(255) DEFAULT NULL,
+  `ContactNo` char(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblcontactusinfo`
+--
+
+INSERT INTO `tblcontactusinfo` (`id`, `Address`, `EmailId`, `ContactNo`) VALUES
+(1, 'Test Demo test demo																									', 'test@test.com', '8585233222');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblcontactusquery`
+--
+
+CREATE TABLE `tblcontactusquery` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `EmailId` varchar(120) DEFAULT NULL,
+  `ContactNumber` char(11) DEFAULT NULL,
+  `Message` longtext,
+  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblcontactusquery`
+--
+
+INSERT INTO `tblcontactusquery` (`id`, `name`, `EmailId`, `ContactNumber`, `Message`, `PostingDate`, `status`) VALUES
+(2, 'caasda', 'webhostingamigo@gmail.com', '42342342', 'drftghjk', '2017-06-30 21:17:09', NULL),
+(3, 'caasda', 'webhostingamigo@gmail.com', '42342342', 'drftghjk', '2017-06-30 21:21:30', NULL),
+(4, 'te', 'sdfsdf@gmail.com', '75787875545', 'sfsdf sdg hs h sh', '2017-07-01 07:19:36', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblpages`
+--
+
+CREATE TABLE `tblpages` (
+  `id` int(11) NOT NULL,
+  `PageName` varchar(255) DEFAULT NULL,
+  `type` varchar(255) NOT NULL DEFAULT '',
+  `detail` longtext NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblpages`
+--
+
+INSERT INTO `tblpages` (`id`, `PageName`, `type`, `detail`) VALUES
+(2, 'Why Become Donor', 'donor', '<span style=\"color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">A blood donation is truly an altruistic gift that an individual can give to others in need. In only 45-60 minutes, an eligible individual can donate one unit of blood that can be separated into four individual components that could help save multiple lives.\r\n\r\nFrom one unit of blood, red blood cells can be extracted and used to treat patients who lost blood due to trauma or those who are recovering from surgery. Plasma, the liquid part of blood, is typically administered to patients with requiring treatment to improve blood clotting. Platelets, a third component, clot the blood when cuts or other open wounds occur, and are often used in the treatment of patients with cancer or those undergoing organ transplants. Finally, cryoprecipitated anti-hemophilic factor (AHF) is also used for clotting factors.</span>'),
+(3, 'About Us ', 'aboutus', '<span style=\"color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; text-align: justify;\">The mission of website is to register volunteer for user and organisation for blood donation which will make it easier for hospital and community blood centres.\r\nDatabase information of the volunteer will help to contact the volunteer for blood donation in emergency. \r\n\r\n\r\n\r\n“Blood Donation Is A Small Act Of Kindness That Does Great And Big Wonders.”\r\n</span>');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblblooddonars`
+--
+ALTER TABLE `tblblooddonars`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblbloodgroup`
+--
+ALTER TABLE `tblbloodgroup`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblcontactusinfo`
+--
+ALTER TABLE `tblcontactusinfo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblcontactusquery`
+--
+ALTER TABLE `tblcontactusquery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblpages`
+--
+ALTER TABLE `tblpages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblblooddonars`
+--
+ALTER TABLE `tblblooddonars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `tblbloodgroup`
+--
+ALTER TABLE `tblbloodgroup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tblcontactusinfo`
+--
+ALTER TABLE `tblcontactusinfo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tblcontactusquery`
+--
+ALTER TABLE `tblcontactusquery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tblpages`
+--
+ALTER TABLE `tblpages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
